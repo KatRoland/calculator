@@ -1,5 +1,16 @@
 *{
     color: #fff;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .calcicon{
@@ -10,7 +21,7 @@
 .calculator{
     display: none;
     width: 350px;
-    height: 575px;
+    height: 510px;
     background-color: #313140;
 }
 
@@ -27,7 +38,7 @@
 }
 
 .left{
-    margin: 10px 25px;
+    margin: 10px;
 }
 
 .right{
@@ -35,13 +46,24 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 10px 0;
 
 
     *{
-        margin-right: 25px;
         font-size: 16px;
     }
+}
+
+.menubtn{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menubtn:hover{
+    cursor: pointer;
+    background-color: red;
 }
 
 .numberarea{
@@ -57,16 +79,31 @@
     }
 }
 
+.upper{
+    text-align: right;
+    p{
+        margin-right: 25px;
+        font-size: 16px;
+        color: rgb(154, 154, 165);
+    }
+}
+
 .operatorarea{
     height: 350px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
     margin: 0 5px;
 
     button{
-        background-color: black;
+        background-color: rgb(22, 17, 17);
+        border-radius: 6px;
     }
+}
+
+.clicked {
+    background-color: #b4b4cc !important;
+    transition: ease 0.3s;
 }
